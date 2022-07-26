@@ -54,7 +54,17 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arrayNumsAverage) {
+  let sumaTotalAverage = 0;
+  let totalAverage = sumaTotalAverage / 2;
+
+   for ( let i = 0; i < arrayNumsAverage.length; i++){
+    sumaTotalAverage += arrayNumsAverage[i];
+   }
+   return sumaTotalAverage;
+}
+
+console.log(averageNumbers(numbersAvg));
 
 // Level 2: Array of strings
 const wordsArr = [
@@ -90,7 +100,16 @@ const wordsUnique = [
   "bring",
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(arr) {
+  const newArr = [];
+  for (let i = 0; i<arr.length; i++){
+    if(!newArr.includes(arr[i]))
+      newArr.push(arr[i]);
+  }
+  return newArr;
+}
+
+console.log(uniquifyArray(wordsUnique))
 
 // Iteration #6: Find elements
 const wordsFind = [
